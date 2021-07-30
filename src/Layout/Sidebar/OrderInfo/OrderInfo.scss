@@ -28,5 +28,14 @@
     color: var(--color-dark-gray);
     font-size: var(--font-size-small);
     margin-bottom: var(--spacing-base-32);
+
+    &__button {
+      position: relative;
+
+      &__icon {
+        position: absolute;
+        right: var(--spacing-base-16);
+      }
+    }
   }
 }

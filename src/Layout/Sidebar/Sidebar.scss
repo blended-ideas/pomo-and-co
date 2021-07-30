@@ -1,5 +1,5 @@
 .sidebar {
-  width: 300px;
+  min-width: 300px;
   background: var(--color-light-gray);
 
   display: flex;
@@ -67,6 +67,10 @@
 
     &__email {
       font-size: 11px;
+    }
+
+    &__toggle {
+      cursor: pointer;
     }
   }
 

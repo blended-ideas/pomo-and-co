@@ -2,22 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Badge.scss';
 
-const Badge = ({ color, children }) => {
-  const badgeColor = `badge-${color}`;
+const Badge = ({ color, text }) => {
+  const badgeColor = `badge--${color}`;
   return (
     <span className={`badge ${badgeColor}`}>
-      {children}
+      {text}
     </span>
   );
 };
 
 Badge.propTypes = {
   color: PropTypes.oneOf(['primary', 'secondary']),
-  children: PropTypes.oneOf(['primary', 'secondary']),
+  text: PropTypes.string,
 };
 
 Badge.defaultProps = {
-  children: null,
+  text: '',
   color: 'primary',
 };
 

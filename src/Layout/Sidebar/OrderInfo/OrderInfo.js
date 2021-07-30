@@ -23,7 +23,7 @@ const OrderInfo = () => (
 
     <Button block className="order-info__detail__button">
       Details
-      <ArrowRight />
+      <ArrowRight className="order-info__detail__button__icon" />
     </Button>
   </div>
 );

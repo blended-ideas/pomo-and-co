@@ -7,7 +7,7 @@ import { ReactComponent as OrdersIcon } from '../../resources/icons/orders.svg';
 import { ReactComponent as HelpAndSupportIcon } from '../../resources/icons/help-and-support.svg';
 import { ReactComponent as NotificationIcon } from '../../resources/icons/notification.svg';
 import { ReactComponent as MenuIcon } from '../../resources/icons/menu.svg';
-import Badge from '../../components/Badge/Badge';
+import Tag from '../../components/Tag/Tag';
 import OrderInfo from './OrderInfo/OrderInfo';
 
 const Sidebar = () => {
@@ -28,20 +28,19 @@ const Sidebar = () => {
 
       <ul className="sidebar__navigation">
         {
-                    navigationItems.map((navItem, index) => (
-                      <li
-                        key={navItem.name}
-                        className={`sidebar__navigation__item ${index === 0 ? 'sidebar__navigation__item--active' : null}`}
-                      >
-                        {navItem.icon}
-                        <span className="sidebar__navigation__item__name">{navItem.name}</span>
-
-                        {
-                                navItem.name === 'Notifications' && <Badge color="primary"> 2 </Badge>
-                            }
-                      </li>
-                    ))
-                }
+          navigationItems.map((navItem, index) => (
+            <li
+              key={navItem.name}
+              className={`sidebar__navigation__item ${index === 0 ? 'sidebar__navigation__item--active' : null}`}
+            >
+              {navItem.icon}
+              <span className="sidebar__navigation__item__name">{navItem.name}</span>
+              {
+                navItem.name === 'Notifications' && <Tag color="primary"> 2 </Tag>
+              }
+            </li>
+          ))
+        }
       </ul>
 
       <OrderInfo />
@@ -51,7 +50,7 @@ const Sidebar = () => {
           <h5 className="sidebar__user-info__name">Mark Clarke</h5>
           <span className="sidebar__user-info__email">markclarke@gmail.com</span>
         </div>
-        <MenuIcon />
+        <MenuIcon className="sidebar__user-info__toggle" />
       </div>
     </div>
   );

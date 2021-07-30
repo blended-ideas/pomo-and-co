@@ -4,7 +4,9 @@
   // Colors
   --color-white: #FFFFFF;
   --color-primary: #503E9D;
+  --color-primary-rgb: 80, 62, 157;
   --color-danger: #FB6D3A;
+  --color-danger-rgb: 251, 109, 58;
 
   --color-light-gray: #F7F7F7;
   --color-text-light: #F7FAFC;
@@ -16,6 +18,8 @@
 
   // Base Spacing
   --spacing-base-2: 2px;
+  --spacing-base-4: 4px;
+  --spacing-base-8: 8px;
   --spacing-base-12: 12px;
   --spacing-base-16: 16px;
   --spacing-base-24: 24px;
@@ -32,6 +36,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: var(--color-white);
   font-size: 16px;
+}
+
+
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 700;
 }
 
 h5 {

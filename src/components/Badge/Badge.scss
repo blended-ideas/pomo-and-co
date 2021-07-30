@@ -1,11 +1,15 @@
 .badge {
-  color: var(--color-text-light);
-  background: var(--color-primary);
-  width: var(--spacing-base-24);
-  height: var(--spacing-base-24);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
+  padding: var(--spacing-base-4) var(--spacing-base-8);
+  font-size: 11px;
+  border-radius: 4px;
+
+  &--primary {
+    color: var(--color-primary);
+    background: rgba(var(--color-primary-rgb), 0.1);
+  }
+
+  &--danger {
+    color: var(--color-danger);
+    background: rgba(var(--color-danger-rgb), 0.1);
+  }
 }
