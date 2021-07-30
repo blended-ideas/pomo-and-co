@@ -1,0 +1,32 @@
+.order-info {
+  background: var(--color-white);
+  padding: var(--spacing-base-32);
+  margin: var(--spacing-base-32);
+  border-radius: var(--spacing-base-20);
+  text-align: center;
+  position: relative;
+
+  &__icon {
+    position: absolute;
+    top: var(--spacing-base-16);
+    right: var(--spacing-base-16);
+  }
+
+  &__clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__icon {
+      border-radius: var(--spacing-base-12);
+      background: rgba(#FB6D3A, 0.1);
+      padding: 16px;
+    }
+  }
+
+  &__detail {
+    color: var(--color-dark-gray);
+    font-size: var(--font-size-small);
+    margin-bottom: var(--spacing-base-32);
+  }
+}

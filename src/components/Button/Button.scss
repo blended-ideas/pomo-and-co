@@ -1,0 +1,20 @@
+.btn {
+  color: var(--color-text-light);
+  border-radius: var(--spacing-base-10);
+  font-weight: 700;
+  border: none;
+  padding: var(--spacing-base-16);
+
+  &--primary {
+    background: var(--color-primary);
+  }
+
+  &--danger {
+    background: var(--color-danger);
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+  }
+}

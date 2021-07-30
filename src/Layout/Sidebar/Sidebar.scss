@@ -1,0 +1,73 @@
+.sidebar {
+  width: 300px;
+  background: var(--color-light-gray);
+
+  display: flex;
+  flex-flow: column;
+
+  border-top-right-radius: var(--spacing-base-24);
+  border-bottom-right-radius: var(--spacing-base-24);
+  padding: var(--spacing-base-16);
+
+  &__brand {
+    margin-top: var(--spacing-base-20);
+    margin-left: var(--spacing-base-16);
+    display: flex;
+
+    &__title {
+      margin-left: 5px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+
+  &__navigation {
+    margin-top: 54px;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: auto;
+
+    &__item {
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      padding: var(--spacing-base-16);
+      color: var(--color-dark-gray);
+
+      &__name {
+        margin-left: var(--spacing-base-24);
+        margin-right: auto;
+      }
+
+      &--active {
+        border-radius: var(--spacing-base-12);
+        background: var(--color-primary);
+        color: var(--color-white);
+        font-weight: 700;
+
+        svg {
+          * {
+            fill: var(--color-white);
+          }
+        }
+      }
+    }
+  }
+
+  &__user-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__name {
+      font-weight: 700;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    &__email {
+      font-size: 11px;
+    }
+  }
+
+}
