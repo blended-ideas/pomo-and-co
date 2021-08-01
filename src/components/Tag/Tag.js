@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Tag.scss';
 
 const Tag = ({ color, children }) => {
-  const tagColor = `tag-${color}`;
+  const tagColor = `tag--${color}`;
   return (
     <span className={`tag ${tagColor}`}>
       {children}
@@ -12,7 +12,7 @@ const Tag = ({ color, children }) => {
 };
 
 Tag.propTypes = {
-  color: PropTypes.oneOf(['primary', 'secondary']),
+  color: PropTypes.oneOf(['primary', 'secondary', 'black']),
   children: PropTypes.node,
 };
 

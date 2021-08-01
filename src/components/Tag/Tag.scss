@@ -1,6 +1,5 @@
 .tag {
   color: var(--color-text-light);
-  background: var(--color-primary);
   width: var(--spacing-base-24);
   height: var(--spacing-base-24);
   border-radius: 50%;
@@ -8,4 +7,12 @@
   align-items: center;
   justify-content: center;
   font-weight: bold;
+
+  &--primary {
+    background: var(--color-primary);
+  }
+
+  &--black {
+    background: var(--color-black);
+  }
 }

@@ -1,37 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './Restaurants.scss';
+import { useDispatch } from 'react-redux';
 import RestaurantList from './RestaurantList/RestaurantList';
-import apiInterface from '../core/APIInterface';
 import RestaurantHeader from './RestaurantHeader/RestaurantHeader';
 import CategoryList from './CategoryList/CategoryList';
+import populateRestaurantStore from '../core/populateRestaurantStore';
 
 const Restaurants = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [restaurants, setRestaurants] = useState([]);
-
-  const getRestaurants = () => {
-    apiInterface('allRestaurants', {})
-      .then((response) => {
-        const restaurantsData = response.allRestaurants
-          .map((restaurant) => ({
-            ...restaurant,
-            restaurantCategory: JSON.parse(restaurant.restaurantCategory),
-            restaurantCuisine: JSON.parse(restaurant.restaurantCuisine),
-          }));
-        setRestaurants(restaurantsData);
-        setIsLoading(false);
-      });
-  };
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    getRestaurants();
+    populateRestaurantStore(dispatch);
   }, []);
 
   return (
     <>
       <RestaurantHeader />
       <CategoryList />
-      <RestaurantList loading={isLoading} restaurants={restaurants} />
+      <RestaurantList />
     </>
   );
 };

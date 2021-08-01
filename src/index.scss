@@ -3,6 +3,7 @@
 :root {
   // Colors
   --color-white: #FFFFFF;
+  --color-black: #000000;
   --color-primary: #503E9D;
   --color-primary-rgb: 80, 62, 157;
   --color-danger: #FB6D3A;
@@ -39,6 +40,11 @@ body {
   font-size: 16px;
 }
 
+
+h1 {
+  font-weight: 700;
+  font-size: 32px;
+}
 
 h2 {
   font-weight: 700;

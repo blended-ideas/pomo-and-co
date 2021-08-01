@@ -5,7 +5,7 @@ import RestaurantDetail from '../RestaurantDetail/RestaurantDetail';
 const routes = Object.freeze([
   {
     id: 'restaurant-detail',
-    path: '/restaurant-detail/:slug',
+    path: '/restaurant-detail/:id',
     exact: false,
     component: <RestaurantDetail />,
   },

@@ -14,6 +14,10 @@
     background: var(--color-danger);
   }
 
+  &--gray {
+    background: var(--color-light-gray);
+  }
+
   &--block {
     display: block;
     width: 100%;

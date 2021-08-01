@@ -1,0 +1,55 @@
+.restaurant-detail {
+  &__content {
+    display: flex;
+    gap: var(--spacing-base-16);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-base-48);
+
+    &__cart-icon {
+      position: relative;
+
+      .tag {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+
+  &__info {
+    &__detail {
+      flex-grow: 1;
+    }
+
+    &__description {
+      color: var(--color-dark-gray);
+    }
+
+    &__image {
+      flex-grow: 1;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    white-space: pre-line;
+    margin-bottom: calc(var(--spacing-base-10) * 2);
+
+    &__text {
+      margin-left: var(--spacing-base-16);
+      color: var(--color-dark-gray);
+    }
+  }
+}
