@@ -11,7 +11,7 @@ import FilterModal from './FilterModal/FilterModal';
 
 const RestaurantHeader = () => {
   const [searchText, setSearchText] = useState('');
-  const [filterModalOpen, setFilterModalOpen] = useState(true);
+  const [filterModalOpen, setFilterModalOpen] = useState(false);
 
   const closeModal = () => {
     setFilterModalOpen(false);
