@@ -8,7 +8,6 @@ import CategoryList from './CategoryList/CategoryList';
 const Restaurants = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [restaurants, setRestaurants] = useState([]);
-  const [categories, setCategories] = useState([]);
 
   const getRestaurants = () => {
     apiInterface('allRestaurants', {})
@@ -19,18 +18,6 @@ const Restaurants = () => {
             restaurantCategory: JSON.parse(restaurant.restaurantCategory),
             restaurantCuisine: JSON.parse(restaurant.restaurantCuisine),
           }));
-
-        const newCategories = restaurantsData
-          .map((r) => r.restaurantCategory)
-          .reduce((acc, resturantCategories) => {
-            resturantCategories.forEach((category) => {
-              if (!acc.includes(category)) {
-                acc.push(category);
-              }
-            });
-            return acc;
-          });
-        setCategories(newCategories);
         setRestaurants(restaurantsData);
         setIsLoading(false);
       });
@@ -43,7 +30,7 @@ const Restaurants = () => {
   return (
     <>
       <RestaurantHeader />
-      <CategoryList categories={categories} />
+      <CategoryList />
       <RestaurantList loading={isLoading} restaurants={restaurants} />
     </>
   );
