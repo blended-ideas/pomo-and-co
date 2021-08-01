@@ -1,0 +1,11 @@
+.restaurant-header {
+  display: flex;
+
+  &__filter-icon {
+    margin-right: calc(var(--spacing-base-10) * 3);
+  }
+
+  &__back-icon {
+    margin-right: auto;
+  }
+}

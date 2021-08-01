@@ -12,7 +12,7 @@ const Badge = ({ color, text }) => {
 };
 
 Badge.propTypes = {
-  color: PropTypes.oneOf(['primary', 'secondary']),
+  color: PropTypes.oneOf(['primary', 'danger']),
   text: PropTypes.string,
 };
 
