@@ -1,6 +1,7 @@
 .sidebar {
   min-width: 300px;
   background: var(--color-light-gray);
+  overflow: auto;
 
   display: flex;
   flex-flow: column;
