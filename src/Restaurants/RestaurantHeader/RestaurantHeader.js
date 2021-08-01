@@ -7,9 +7,15 @@ import { ReactComponent as RestaurantIcon } from '../../resources/icons/restaura
 import { ReactComponent as CartIcon } from '../../resources/icons/shopping-cart.svg';
 import { ReactComponent as MenuIcon } from '../../resources/icons/menu.svg';
 import './RestaurantHeader.scss';
+import FilterModal from './FilterModal/FilterModal';
 
 const RestaurantHeader = () => {
   const [searchText, setSearchText] = useState('');
+  const [filterModalOpen, setFilterModalOpen] = useState(true);
+
+  const closeModal = () => {
+    setFilterModalOpen(false);
+  };
 
   return (
     <header className="restaurant-header">
@@ -37,13 +43,17 @@ const RestaurantHeader = () => {
         />
       </div>
 
-      <Button className="restaurant-header__filter-icon" iconOnly>
+      <Button className="restaurant-header__filter-icon" iconOnly onClick={() => setFilterModalOpen(true)}>
         <FilterIcon />
       </Button>
 
       <Button className="restaurant-header__cart-icon" color="danger" iconOnly>
         <CartIcon />
       </Button>
+
+      {
+          filterModalOpen ? <FilterModal closeModal={closeModal} /> : null
+      }
     </header>
   );
 };
