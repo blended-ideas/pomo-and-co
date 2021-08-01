@@ -1,8 +1,24 @@
 .restaurant-header {
   display: flex;
+  align-items: center;
   gap: var(--spacing-base-16);
 
+  &__location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__restaurant-icon {
+      margin-right: var(--spacing-base-12);
+    }
+
+    &__name {
+      margin-right: var(--spacing-base-48);
+    }
+  }
+
   &__search {
+
     position: relative;
 
     &-icon {
@@ -14,10 +30,12 @@
     }
 
     &-input {
+      border: none;
       background: var(--color-light-gray);
       border-radius: 10px;
       padding: var(--spacing-base-12) var(--spacing-base-12) var(--spacing-base-12) var(--spacing-base-48);
-      min-width: 300px;
+      min-width: 380px;
+      height: 48px;
 
       &::placeholder {
         color: var(--color-dark-gray);

@@ -26,6 +26,7 @@
   --spacing-base-24: 24px;
   --spacing-base-32: 32px;
   --spacing-base-48: 48px;
+  --spacing-base-64: 64px;
 
   --spacing-base-10: 10px;
   --spacing-base-20: 20px;
@@ -38,6 +39,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: var(--color-white);
   font-size: 16px;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
 }
 
 
